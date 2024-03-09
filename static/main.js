@@ -75,7 +75,7 @@ const post_list = (id, user_img, author_id, img, liked, likes, author, no_of_com
                         <button class="border-0 pl-2 pr-2 btn btn-primary" id="like-unlike-${id}" >${liked ? "Dislike":"Like"}</button>
                     </form>
                 </div>
-                <p class="text-muted mb-1 mt-1 text-bold" id="likes-${id}">${Likes}</p>
+                <p class="text-muted mb-1 mt-1 text-bold" id="likes-${id}">${likes}</p>
                 <a href="" class="text-dark">
                         <h6 class="d-inline">${author}</h6>
                 </a>
