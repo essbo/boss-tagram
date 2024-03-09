@@ -41,9 +41,9 @@ const likeUnlikePosts = () => {
                 document.getElementById(`likes-${clickId}`).textContent = response.count;
                 document.getElementById(`likes-${clickId}`).textContent = response.count;
                 if(response.liked) {
-                    clickedBtn.innerHTML = 'like';
+                    clickedBtn.innerHTML = 'Like';
                 }else {
-                    clickedBtn.innerHTML = 'unlike';
+                    clickedBtn.innerHTML = 'Dislike';
                 }
             },
             error: function(response) {
@@ -72,7 +72,7 @@ const post_list = (id, user_img, author_id, img, liked, likes, author, no_of_com
             <div class="card-body">
                 <div className="btns">
                     <form class="d-inline like-unlike-form" form-like-id=${id}>
-                        <button class="border-0 pl-2 pr-2 btn btn-primary" id="like-unlike-${id}" >${liked ? "Like":"Dislike"}</button>
+                        <button class="border-0 pl-2 pr-2 btn btn-primary" id="like-unlike-${id}" >${liked ? "Dislike":"Like"}</button>
                     </form>
                 </div>
                 <p class="text-muted mb-1 mt-1 text-bold" id="likes-${id}">${Likes}</p>

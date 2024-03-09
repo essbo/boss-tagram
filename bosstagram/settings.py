@@ -6,8 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '*^w!-_)u@y5eqzh-h5sn#jok5l+p2r@%j9-snn+^-wu%$70a&l'
 
 DEBUG = True
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['192.168.0.18', 'kleiniheini.de']
+CSRF_TRUSTED_ORIGINS = ['https://kleiniheini.de']
+CSRF_COOKIE_DOMAIN = '.kleiniheini.de'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -57,10 +58,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'picme',
-        'USER': 'picme',
-        'PASSWORD': 'picme',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
         'HOST': 'localhost',
-        ''
     }
 }
 
