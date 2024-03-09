@@ -6,7 +6,7 @@ Bosstagram ist ein Instagram-Klon, der mit Django und PostgreSQL entwickelt wurd
 ## Installation
 Um deine eigene Instanz von Bosstagram zu erstellen, folge diesen Schritten:
 1. Klone das Git-Repository.
-2. Installiere Django, Django Crispy-Bootstrap4 und das PostgreSQL-Django-Modul.
+2. Installiere Django, Django Crispy-Bootstrap4 , Django Crispy Forms und das PostgreSQL-Django-Modul.
 3. Führe die Django-Migrations aus:
     ```bash
     python manage.py makemigrations
