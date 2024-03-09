@@ -26,3 +26,6 @@ Bei Fragen oder Problemen kannst du mich per E-Mail kontaktieren: Bosse.klein@kl
 ## Hinweise
 - Mit zunehmender Anzahl von Posts verlängert sich die Zeit, die benötigt wird, um die Hauptseite zu laden.
 - Bitte beachte, dass der Support begrenzt ist und möglicherweise nicht verfügbar ist, wenn ich das Projekt beende oder aufgebe.
+- Wenn du die Daten wie Bilder und Profilbilder nicht auf der Hauptplate speichern willst , erstelle einfach einen Symlink zu dem gewünschten Pfad.
+- Stelle sicher, das der Pfad gemountet ist und das der Pfad vor dem Starten des Webservers vorhanden ist
+- Stelle sicher das TMUX installiert ist um den Django Server daherhaft im Headles laufen zu lassen.
