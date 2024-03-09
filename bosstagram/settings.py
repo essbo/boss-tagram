@@ -60,6 +60,7 @@ DATABASES = {
         'USER': 'picme',
         'PASSWORD': 'picme',
         'HOST': 'localhost',
+        ''
     }
 }
 
