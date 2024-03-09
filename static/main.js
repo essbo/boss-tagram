@@ -20,7 +20,12 @@ const getCookie = (name) => {
     }
     return cookieValue;
 }
-const csrftoken = getCookie('csrftoken');
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
 
 const likeUnlikePosts = () => {
     const likeUnlikeForms = [...document.getElementsByClassName('like-unlike-form')];
@@ -33,8 +38,10 @@ const likeUnlikePosts = () => {
             type: 'POST',
             url: '/like-unlike/',
             data: {
-                'csrfmiddlewaretoken': csrftoken,
                 'pk': clickId
+            },
+            beforeSend: function(xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
             },
             success: function(response) {
                 console.log(response);
@@ -52,6 +59,7 @@ const likeUnlikePosts = () => {
         })
     }))
 }
+
 
 const post_list = (id, user_img, author_id, img, liked, likes, author, no_of_comments, content, created) => {
     return `
