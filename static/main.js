@@ -35,9 +35,6 @@ const likeUnlikePosts = () => {
             data: {
                 'pk': clickId
             },
-            beforeSend: function(xhr, settings) {
-                xhr.setRequestHeader("X-CSRFToken", csrftoken);
-            },
             success: function(response) {
                 console.log(response);
                 document.getElementById(`likes-${clickId}`).textContent = response.count;
