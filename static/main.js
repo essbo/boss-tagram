@@ -33,8 +33,10 @@ const likeUnlikePosts = () => {
             type: 'POST',
             url: '/like-unlike/',
             data: {
-                'csrfmiddlewaretoken': csrftoken,
                 'pk': clickId
+            },
+            beforeSend: function(xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
             },
             success: function(response) {
                 console.log(response);
@@ -76,8 +78,8 @@ const post_list = (id, user_img, author_id, img, liked, likes, author, no_of_com
                     </form>
                 </div>
                 <p class="text-muted mb-1 mt-1 text-bold" id="likes-${id}">${likes}</p>
-    <p class="text-muted mb-1 mt-1 text-bold" id="likes-${id}">${likes}</p>
-nline">${author}</h6>
+                <a href="" class="text-dark">
+                        <h6 class="d-inline">${author}</h6>
                 </a>
                 <p class="d-inline">${content}</p>
                 <p class="text-muted mb-1">${created}</p>
