@@ -6,9 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '*^w!-_)u@y5eqzh-h5sn#jok5l+p2r@%j9-snn+^-wu%$70a&l'
 
 DEBUG = True
-ALLOWED_HOSTS = ['192.168.0.18', 'kleiniheini.de']
-CSRF_TRUSTED_ORIGINS = ['https://kleiniheini.de']
-CSRF_COOKIE_DOMAIN = '.kleiniheini.de'
+ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = []
+CSRF_COOKIE_DOMAIN = ''
 CSRF_COOKIE_SECURE = True
 
 INSTALLED_APPS = [
@@ -57,7 +57,7 @@ WSGI_APPLICATION = 'bosstagram.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'picme',
+        'NAME': 'bosstagram',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
@@ -108,7 +108,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.google.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'bosstagram712@gmail.com'
-EMAIL_HOST_PASSWORD = 'Cvb5xdf87z2'
-EMAIL_DEFAULT_FROM = 'bosstagram712@gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_DEFAULT_FROM = ''
 
