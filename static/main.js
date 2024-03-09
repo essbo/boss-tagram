@@ -20,12 +20,7 @@ const getCookie = (name) => {
     }
     return cookieValue;
 }
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-}
-
+const csrftoken = getCookie('csrftoken');
 
 const likeUnlikePosts = () => {
     const likeUnlikeForms = [...document.getElementsByClassName('like-unlike-form')];
@@ -83,9 +78,8 @@ const post_list = (id, user_img, author_id, img, liked, likes, author, no_of_com
                         <button class="border-0 pl-2 pr-2 btn btn-primary" id="like-unlike-${id}" >${liked ? "Dislike":"Like"}</button>
                     </form>
                 </div>
-                <p class="text-muted mb-1 mt-1 text-bold" id="likes-${id}">${likes}</p>
-                <a href="" class="text-dark">
-                        <h6 class="d-inline">${author}</h6>
+                <p class="text-muted mb-1 mt-1 text-bold" id="likes-${id}">${                <p class="text-muted mb-1 mt-1 text-bold" id="likes-${id}">${likes}</p>
+"d-inline">${author}</h6>
                 </a>
                 <p class="d-inline">${content}</p>
                 <p class="text-muted mb-1">${created}</p>
